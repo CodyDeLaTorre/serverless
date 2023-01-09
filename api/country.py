@@ -17,7 +17,7 @@ class handler(BaseHTTPRequestHandler):
             for country_data in data:
                 definition = country_data["capital"][0]
                 definitions.append(definition)
-            message = f'The capital of Chile is {definitions[0]}'
+            message = f'The capital of {dic["country"]} is {definitions[0]}'
 
         else:
             # message = f'The capital of Chile is Santiago'
