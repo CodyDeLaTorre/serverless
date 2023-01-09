@@ -16,11 +16,12 @@ class handler(BaseHTTPRequestHandler):
             definitions = []
             for country_data in data:
                 definition = country_data["capital"][0]
+                name = country_data["name"].common
                 definitions.append(definition)
-            message = f'The capital of {dic["country"]} is {definitions[0]}'
+                definitions.append(name)
+            message = f'The capital of {definitions[1]} is {definitions[0]}'
 
         else:
-            # message = f'The capital of Chile is Santiago'
             message = "Give me a country to define please"
 
         self.send_response(200)
