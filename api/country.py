@@ -16,7 +16,7 @@ class handler(BaseHTTPRequestHandler):
             definitions = []
             for country_data in data:
                 definition = country_data["capital"][0]
-                name = country_data["name"].common
+                name = country_data["name"]
                 definitions.append(definition)
                 definitions.append(name)
             message = f'The capital of {definitions[1]} is {definitions[0]}'
