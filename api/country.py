@@ -14,9 +14,9 @@ class handler(BaseHTTPRequestHandler):
             r = requests.get(url + dic["country"])
             data = r.json()
             definitions = []
-            # for country_data in data:
-            #     definition = country_data["capital"][0]["name"][0]
-            #     definitions.append(definition)
+            for country_data in data:
+                definition = country_data["capital"][0]["name"][0]
+                definitions.append(definition)
             message = f'The capital of {definitions[1]} is {definitions[0]}'
 
         else:
